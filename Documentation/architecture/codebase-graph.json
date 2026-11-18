@@ -96,6 +96,24 @@
       "evidence": "driver_packager/entrypoint.sh:5",
       "rel": "runs",
       "src": "script:driver_packager/entrypoint.sh"
+    },
+    {
+      "dst": "script:generator/diagnostics.py",
+      "evidence": "generator/project_graph.py:35",
+      "rel": "requires",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "script:generator/extractors.py",
+      "evidence": "generator/project_graph.py:15",
+      "rel": "requires",
+      "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "script:generator/manifest.py",
+      "evidence": "generator/project_graph.py:32",
+      "rel": "requires",
+      "src": "script:generator/project_graph.py"
     }
   ],
   "gaps": [
@@ -125,9 +143,89 @@
       "item": ".gitignore mentions secret-shaped name 'salt' (value not recorded)"
     },
     {
+      "evidence": "Documentation/architecture/codebase-graph.json:124",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:salt",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'salt' (value not recorded)"
+    },
+    {
+      "evidence": "Documentation/architecture/codebase-graph.json:124",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:secret",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'secret' (value not recorded)"
+    },
+    {
       "evidence": "driver_packager/createc4z/README.md:41",
       "id": "secret-name:driver_packager/createc4z/README.md:secret",
       "item": "driver_packager/createc4z/README.md mentions secret-shaped name 'secret' (value not recorded)"
+    },
+    {
+      "evidence": "generator/diagnostics.py:4",
+      "id": "secret-name:generator/diagnostics.py:secret",
+      "item": "generator/diagnostics.py mentions secret-shaped name 'secret' (value not recorded)"
+    },
+    {
+      "evidence": "generator/extractors.py:36",
+      "id": "secret-name:generator/extractors.py:sh_token_re",
+      "item": "generator/extractors.py mentions secret-shaped name 'SH_TOKEN_RE' (value not recorded)"
+    },
+    {
+      "evidence": "generator/extractors.py:67",
+      "id": "secret-name:generator/extractors.py:token",
+      "item": "generator/extractors.py mentions secret-shaped name 'token' (value not recorded)"
+    },
+    {
+      "evidence": "generator/manifest.py:11",
+      "id": "secret-name:generator/manifest.py:secret",
+      "item": "generator/manifest.py mentions secret-shaped name 'secret' (value not recorded)"
+    },
+    {
+      "evidence": "generator/project_graph.py:489",
+      "id": "secret-name:generator/project_graph.py:api_key",
+      "item": "generator/project_graph.py mentions secret-shaped name 'API_KEY' (value not recorded)"
+    },
+    {
+      "evidence": "generator/project_graph.py:487",
+      "id": "secret-name:generator/project_graph.py:license_salt",
+      "item": "generator/project_graph.py mentions secret-shaped name 'LICENSE_SALT' (value not recorded)"
+    },
+    {
+      "evidence": "generator/project_graph.py:85",
+      "id": "secret-name:generator/project_graph.py:salt",
+      "item": "generator/project_graph.py mentions secret-shaped name 'SALT' (value not recorded)"
+    },
+    {
+      "evidence": "generator/project_graph.py:75",
+      "id": "secret-name:generator/project_graph.py:secret_basenames",
+      "item": "generator/project_graph.py mentions secret-shaped name 'SECRET_BASENAMES' (value not recorded)"
+    },
+    {
+      "evidence": "generator/project_graph.py:77",
+      "id": "secret-name:generator/project_graph.py:secret_globs",
+      "item": "generator/project_graph.py mentions secret-shaped name 'SECRET_GLOBS' (value not recorded)"
+    },
+    {
+      "evidence": "generator/project_graph.py:91",
+      "id": "secret-name:generator/project_graph.py:secret_single",
+      "item": "generator/project_graph.py mentions secret-shaped name 'SECRET_SINGLE' (value not recorded)"
+    },
+    {
+      "evidence": "generator/project_graph.py:88",
+      "id": "secret-name:generator/project_graph.py:secret_substrs",
+      "item": "generator/project_graph.py mentions secret-shaped name 'SECRET_SUBSTRS' (value not recorded)"
+    },
+    {
+      "evidence": "generator/project_graph.py:87",
+      "id": "secret-name:generator/project_graph.py:secret_token_re",
+      "item": "generator/project_graph.py mentions secret-shaped name 'SECRET_TOKEN_RE' (value not recorded)"
+    },
+    {
+      "evidence": "graph.config.json:6",
+      "id": "secret-name:graph.config.json:secret",
+      "item": "graph.config.json mentions secret-shaped name 'secret' (value not recorded)"
+    },
+    {
+      "evidence": "graph.config.json:12",
+      "id": "secret-name:graph.config.json:secrets_policy",
+      "item": "graph.config.json mentions secret-shaped name 'secrets_policy' (value not recorded)"
     },
     {
       "evidence": "build/v1/encrypted/Atomberg_Fan.c4z:1",
@@ -135,7 +233,7 @@
       "item": "skipped (secret-shaped or generated); name only, content not ingested"
     }
   ],
-  "generated_at": "2026-11-18T21:59:50Z",
+  "generated_at": "2026-11-18T22:29:25Z",
   "nodes": [
     {
       "attrs": {
@@ -157,6 +255,15 @@
     },
     {
       "attrs": {
+        "lines": 486,
+        "path": "Documentation/architecture/codebase-graph.json"
+      },
+      "id": "config:Documentation/architecture/codebase-graph.json",
+      "source": "Documentation/architecture/codebase-graph.json",
+      "type": "config"
+    },
+    {
+      "attrs": {
         "lines": 6,
         "path": "driver_packager/.dockerignore"
       },
@@ -171,6 +278,33 @@
       },
       "id": "config:driver_packager/.gitignore",
       "source": "driver_packager/.gitignore",
+      "type": "config"
+    },
+    {
+      "attrs": {
+        "lines": 2,
+        "path": "graph-template-VERSION"
+      },
+      "id": "config:graph-template-VERSION",
+      "source": "graph-template-VERSION",
+      "type": "config"
+    },
+    {
+      "attrs": {
+        "lines": 20,
+        "path": "graph.config.json"
+      },
+      "id": "config:graph.config.json",
+      "source": "graph.config.json",
+      "type": "config"
+    },
+    {
+      "attrs": {
+        "lines": 41,
+        "path": "manifest.schema.json"
+      },
+      "id": "config:manifest.schema.json",
+      "source": "manifest.schema.json",
       "type": "config"
     },
     {
@@ -355,6 +489,42 @@
     },
     {
       "attrs": {
+        "lines": 74,
+        "path": "generator/diagnostics.py"
+      },
+      "id": "script:generator/diagnostics.py",
+      "source": "generator/diagnostics.py",
+      "type": "script"
+    },
+    {
+      "attrs": {
+        "lines": 426,
+        "path": "generator/extractors.py"
+      },
+      "id": "script:generator/extractors.py",
+      "source": "generator/extractors.py",
+      "type": "script"
+    },
+    {
+      "attrs": {
+        "lines": 193,
+        "path": "generator/manifest.py"
+      },
+      "id": "script:generator/manifest.py",
+      "source": "generator/manifest.py",
+      "type": "script"
+    },
+    {
+      "attrs": {
+        "lines": 724,
+        "path": "generator/project_graph.py"
+      },
+      "id": "script:generator/project_graph.py",
+      "source": "generator/project_graph.py",
+      "type": "script"
+    },
+    {
+      "attrs": {
         "bytes": 121342,
         "path": "driver_packager/dp/squish"
       },
@@ -363,7 +533,7 @@
       "type": "vendor"
     }
   ],
-  "source_commit": "e0b59e59cf5ae59903dd14523507fa31f892c8a5",
+  "source_commit": "a18f861948a3999ea6192863b5b33fd612cbc09c",
   "sources": [
     {
       "path": ".gitattributes",
@@ -372,6 +542,10 @@
     {
       "path": ".gitignore",
       "sha256": "c446a80a89e5ef61fa9520200ea3283bd78041e85ef13d0ff33aea4ddc54f77c"
+    },
+    {
+      "path": "Documentation/architecture/codebase-graph.json",
+      "sha256": "fb2db20b99e269e1cec24804c438a9c41f1c3876b12eb4c070d4f8bbdac3ff48"
     },
     {
       "path": "driver_packager/.dockerignore",
@@ -480,6 +654,34 @@
     {
       "path": "driver_packager/nextGen.md",
       "sha256": "68232e283c57a57044e27968a255b493c95a5f49cf62abcd6f3c535f0ef250fa"
+    },
+    {
+      "path": "generator/diagnostics.py",
+      "sha256": "b9cbc975c913af98de2f03839e47589d4bbcbde310beddc600f5bbf4b3578665"
+    },
+    {
+      "path": "generator/extractors.py",
+      "sha256": "8e214e66aa23c043994b394f700d138502d6038bd2d6ff9a2e79b446e118b3fa"
+    },
+    {
+      "path": "generator/manifest.py",
+      "sha256": "a88088bd2d52a21b4ce484e6816778ce8238a5d4cd31350903f84a274ff1d772"
+    },
+    {
+      "path": "generator/project_graph.py",
+      "sha256": "9ed2745480bf96220bddbe4fe96e31897bf15d8aef6d25ef663202ab990eeac4"
+    },
+    {
+      "path": "graph-template-VERSION",
+      "sha256": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67"
+    },
+    {
+      "path": "graph.config.json",
+      "sha256": "a4612d50ad3c0ef80d48cc5d3a8037660f0bc211e8a2185ae81efb06dbb2a180"
+    },
+    {
+      "path": "manifest.schema.json",
+      "sha256": "903287c40311bb6c5060f258eb71a6c7981b1e484614611f1177690e847b3c98"
     }
   ]
 }
