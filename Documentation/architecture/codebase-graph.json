@@ -44,6 +44,24 @@
       "src": "manifest:driver_packager/action.yml"
     },
     {
+      "dst": "script:generator/project_graph.py",
+      "evidence": ".github/tests/test-graph-freshness.sh:175",
+      "rel": "runs",
+      "src": "script:.github/tests/test-graph-freshness.sh"
+    },
+    {
+      "dst": "script:generator/project_graph.py",
+      "evidence": ".github/tests/test-graph-freshness.sh:29",
+      "rel": "runs",
+      "src": "script:.github/tests/test-graph-freshness.sh"
+    },
+    {
+      "dst": "script:generator/project_graph.py",
+      "evidence": ".github/tests/test-graph-freshness.sh:71",
+      "rel": "runs",
+      "src": "script:.github/tests/test-graph-freshness.sh"
+    },
+    {
       "dst": "script:driver_packager/dp/encrypt_c4z.py",
       "evidence": "driver_packager/dp/build_c4z.py:16",
       "rel": "requires",
@@ -114,6 +132,36 @@
       "evidence": "generator/project_graph.py:32",
       "rel": "requires",
       "src": "script:generator/project_graph.py"
+    },
+    {
+      "dst": "script:.github/tests/test-graph-freshness.sh",
+      "evidence": ".github/workflows/graph-freshness.yml:147",
+      "rel": "runs",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "script:.github/tests/test-graph-freshness.sh",
+      "evidence": ".github/workflows/graph-freshness.yml:6",
+      "rel": "runs",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "script:generator/project_graph.py",
+      "evidence": ".github/workflows/graph-freshness.yml:142",
+      "rel": "runs",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "script:generator/project_graph.py",
+      "evidence": ".github/workflows/graph-freshness.yml:50",
+      "rel": "runs",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
+    },
+    {
+      "dst": "script:generator/project_graph.py",
+      "evidence": ".github/workflows/graph-freshness.yml:81",
+      "rel": "runs",
+      "src": "workflow:.github/workflows/graph-freshness.yml"
     }
   ],
   "gaps": [
@@ -138,19 +186,59 @@
       "item": "identical copy of driver_packager/dp/squish; ingested once"
     },
     {
+      "evidence": ".github/tests/test-graph-freshness.sh:61",
+      "id": "secret-name:.github/tests/test-graph-freshness.sh:secret",
+      "item": ".github/tests/test-graph-freshness.sh mentions secret-shaped name 'secret' (value not recorded)"
+    },
+    {
+      "evidence": ".github/workflows/graph-freshness.yml:11",
+      "id": "secret-name:.github/workflows/graph-freshness.yml:secret",
+      "item": ".github/workflows/graph-freshness.yml mentions secret-shaped name 'secret' (value not recorded)"
+    },
+    {
       "evidence": ".gitignore:9",
       "id": "secret-name:.gitignore:salt",
       "item": ".gitignore mentions secret-shaped name 'salt' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:124",
-      "id": "secret-name:Documentation/architecture/codebase-graph.json:salt",
-      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'salt' (value not recorded)"
+      "evidence": "Documentation/architecture/codebase-graph.json:183",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:api_key",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'API_KEY' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:124",
-      "id": "secret-name:Documentation/architecture/codebase-graph.json:secret",
-      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'secret' (value not recorded)"
+      "evidence": "Documentation/architecture/codebase-graph.json:188",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:license_salt",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'LICENSE_SALT' (value not recorded)"
+    },
+    {
+      "evidence": "Documentation/architecture/codebase-graph.json:188",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:salt",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SALT' (value not recorded)"
+    },
+    {
+      "evidence": "Documentation/architecture/codebase-graph.json:198",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_basenames",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_BASENAMES' (value not recorded)"
+    },
+    {
+      "evidence": "Documentation/architecture/codebase-graph.json:203",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_globs",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_GLOBS' (value not recorded)"
+    },
+    {
+      "evidence": "Documentation/architecture/codebase-graph.json:208",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_single",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_SINGLE' (value not recorded)"
+    },
+    {
+      "evidence": "Documentation/architecture/codebase-graph.json:213",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_substrs",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_SUBSTRS' (value not recorded)"
+    },
+    {
+      "evidence": "Documentation/architecture/codebase-graph.json:218",
+      "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_token_re",
+      "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_TOKEN_RE' (value not recorded)"
     },
     {
       "evidence": "driver_packager/createc4z/README.md:41",
@@ -233,7 +321,7 @@
       "item": "skipped (secret-shaped or generated); name only, content not ingested"
     }
   ],
-  "generated_at": "2026-11-18T22:29:25Z",
+  "generated_at": "2026-11-19T05:39:04Z",
   "nodes": [
     {
       "attrs": {
@@ -255,7 +343,7 @@
     },
     {
       "attrs": {
-        "lines": 486,
+        "lines": 688,
         "path": "Documentation/architecture/codebase-graph.json"
       },
       "id": "config:Documentation/architecture/codebase-graph.json",
@@ -360,6 +448,15 @@
       "id": "manifest:driver_packager/action.yml",
       "source": "driver_packager/action.yml",
       "type": "manifest"
+    },
+    {
+      "attrs": {
+        "lines": 226,
+        "path": ".github/tests/test-graph-freshness.sh"
+      },
+      "id": "script:.github/tests/test-graph-freshness.sh",
+      "source": ".github/tests/test-graph-freshness.sh",
+      "type": "script"
     },
     {
       "attrs": {
@@ -531,13 +628,30 @@
       "id": "vendor:driver_packager/dp/squish",
       "source": "driver_packager/dp/squish",
       "type": "vendor"
+    },
+    {
+      "attrs": {
+        "lines": 148,
+        "path": ".github/workflows/graph-freshness.yml"
+      },
+      "id": "workflow:.github/workflows/graph-freshness.yml",
+      "source": ".github/workflows/graph-freshness.yml",
+      "type": "workflow"
     }
   ],
-  "source_commit": "a18f861948a3999ea6192863b5b33fd612cbc09c",
+  "source_commit": "8af35f9f987e11b55566d83e787a76b681d4d656",
   "sources": [
     {
       "path": ".gitattributes",
       "sha256": "1a1dbe176bc233b499d35a57db7513f2941c99ab9759f177830c9149be99005b"
+    },
+    {
+      "path": ".github/tests/test-graph-freshness.sh",
+      "sha256": "b5a0393fa8b10e87da22a524d44ebd3448041ce863acd414eb80afed22fbe0b6"
+    },
+    {
+      "path": ".github/workflows/graph-freshness.yml",
+      "sha256": "fa1347e61bd5d690066003788ab7f2db21a3a418f2bd1c2138517e172f868e98"
     },
     {
       "path": ".gitignore",
@@ -545,7 +659,7 @@
     },
     {
       "path": "Documentation/architecture/codebase-graph.json",
-      "sha256": "fb2db20b99e269e1cec24804c438a9c41f1c3876b12eb4c070d4f8bbdac3ff48"
+      "sha256": "63d95d35b2ed05206ce00239ee3616719af85a34b38dd4d55b40c094514f8eb7"
     },
     {
       "path": "driver_packager/.dockerignore",
