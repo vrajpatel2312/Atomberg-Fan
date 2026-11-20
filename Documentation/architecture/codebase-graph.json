@@ -201,44 +201,49 @@
       "item": ".gitignore mentions secret-shaped name 'salt' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:183",
+      "evidence": "Documentation/architecture/codebase-graph.json:206",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:api_key",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'API_KEY' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:188",
+      "evidence": "Documentation/architecture/codebase-graph.json:211",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:license_salt",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'LICENSE_SALT' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:188",
+      "evidence": "Documentation/architecture/codebase-graph.json:211",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:salt",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SALT' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:198",
+      "evidence": "Documentation/architecture/codebase-graph.json:221",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_basenames",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_BASENAMES' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:203",
+      "evidence": "Documentation/architecture/codebase-graph.json:226",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_globs",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_GLOBS' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:208",
+      "evidence": "Documentation/architecture/codebase-graph.json:231",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_single",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_SINGLE' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:213",
+      "evidence": "Documentation/architecture/codebase-graph.json:236",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_substrs",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_SUBSTRS' (value not recorded)"
     },
     {
-      "evidence": "Documentation/architecture/codebase-graph.json:218",
+      "evidence": "Documentation/architecture/codebase-graph.json:241",
       "id": "secret-name:Documentation/architecture/codebase-graph.json:secret_token_re",
       "item": "Documentation/architecture/codebase-graph.json mentions secret-shaped name 'SECRET_TOKEN_RE' (value not recorded)"
+    },
+    {
+      "evidence": "README.md:23",
+      "id": "secret-name:README.md:salt",
+      "item": "README.md mentions secret-shaped name 'salt' (value not recorded)"
     },
     {
       "evidence": "driver_packager/createc4z/README.md:41",
@@ -321,7 +326,7 @@
       "item": "skipped (secret-shaped or generated); name only, content not ingested"
     }
   ],
-  "generated_at": "2026-11-19T05:39:04Z",
+  "generated_at": "2026-11-20T20:01:24Z",
   "nodes": [
     {
       "attrs": {
@@ -343,7 +348,7 @@
     },
     {
       "attrs": {
-        "lines": 688,
+        "lines": 802,
         "path": "Documentation/architecture/codebase-graph.json"
       },
       "id": "config:Documentation/architecture/codebase-graph.json",
@@ -394,6 +399,15 @@
       "id": "config:manifest.schema.json",
       "source": "manifest.schema.json",
       "type": "config"
+    },
+    {
+      "attrs": {
+        "lines": 82,
+        "path": "README.md"
+      },
+      "id": "doc:README.md",
+      "source": "README.md",
+      "type": "doc"
     },
     {
       "attrs": {
@@ -639,7 +653,7 @@
       "type": "workflow"
     }
   ],
-  "source_commit": "8af35f9f987e11b55566d83e787a76b681d4d656",
+  "source_commit": "9d65bc620bb87373f802f796dd8120f70ad0854e",
   "sources": [
     {
       "path": ".gitattributes",
@@ -659,7 +673,11 @@
     },
     {
       "path": "Documentation/architecture/codebase-graph.json",
-      "sha256": "63d95d35b2ed05206ce00239ee3616719af85a34b38dd4d55b40c094514f8eb7"
+      "sha256": "56bde6d46e693010fa04dfb5afc69ef44e7db6235f15fed1a02d27ed9dfadab5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "47e3a243dd058adc0abb40ddb8b2068f541f8f13b17f3bcdf234e71b1c44828a"
     },
     {
       "path": "driver_packager/.dockerignore",
