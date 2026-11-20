@@ -326,7 +326,7 @@
       "item": "skipped (secret-shaped or generated); name only, content not ingested"
     }
   ],
-  "generated_at": "2026-11-20T20:01:24Z",
+  "generated_at": "2026-11-20T22:17:20Z",
   "nodes": [
     {
       "attrs": {
@@ -348,7 +348,7 @@
     },
     {
       "attrs": {
-        "lines": 802,
+        "lines": 820,
         "path": "Documentation/architecture/codebase-graph.json"
       },
       "id": "config:Documentation/architecture/codebase-graph.json",
@@ -653,7 +653,7 @@
       "type": "workflow"
     }
   ],
-  "source_commit": "9d65bc620bb87373f802f796dd8120f70ad0854e",
+  "source_commit": "a578c4054a03bf9115b4b5a76da1ec061395714d",
   "sources": [
     {
       "path": ".gitattributes",
@@ -673,7 +673,7 @@
     },
     {
       "path": "Documentation/architecture/codebase-graph.json",
-      "sha256": "56bde6d46e693010fa04dfb5afc69ef44e7db6235f15fed1a02d27ed9dfadab5"
+      "sha256": "10fa56d68a8e34a9c8e129450f4f0af5eeca0ed9841cd2cdcf42c968bd48c67b"
     },
     {
       "path": "README.md",
