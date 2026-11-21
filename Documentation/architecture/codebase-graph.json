@@ -326,7 +326,7 @@
       "item": "skipped (secret-shaped or generated); name only, content not ingested"
     }
   ],
-  "generated_at": "2026-11-20T22:17:20Z",
+  "generated_at": "2026-11-21T10:47:34Z",
   "nodes": [
     {
       "attrs": {
@@ -399,6 +399,15 @@
       "id": "config:manifest.schema.json",
       "source": "manifest.schema.json",
       "type": "config"
+    },
+    {
+      "attrs": {
+        "lines": 42,
+        "path": "AGENTS.md"
+      },
+      "id": "doc:AGENTS.md",
+      "source": "AGENTS.md",
+      "type": "doc"
     },
     {
       "attrs": {
@@ -653,7 +662,7 @@
       "type": "workflow"
     }
   ],
-  "source_commit": "a578c4054a03bf9115b4b5a76da1ec061395714d",
+  "source_commit": "8b623b11e8f5c7a04cb045855e6476b72ddeb80f",
   "sources": [
     {
       "path": ".gitattributes",
@@ -672,8 +681,12 @@
       "sha256": "c446a80a89e5ef61fa9520200ea3283bd78041e85ef13d0ff33aea4ddc54f77c"
     },
     {
+      "path": "AGENTS.md",
+      "sha256": "32a81b6ade5c4fa7478b4edeaec01f080f977382bf63ade812b3fb45ec4bede0"
+    },
+    {
       "path": "Documentation/architecture/codebase-graph.json",
-      "sha256": "10fa56d68a8e34a9c8e129450f4f0af5eeca0ed9841cd2cdcf42c968bd48c67b"
+      "sha256": "2a0ebfae4074bb9cf44204b3f91bd859403e4cda8e6b1f77e441c8c8ccbc69a2"
     },
     {
       "path": "README.md",
