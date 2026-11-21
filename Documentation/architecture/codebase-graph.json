@@ -326,7 +326,7 @@
       "item": "skipped (secret-shaped or generated); name only, content not ingested"
     }
   ],
-  "generated_at": "2026-11-21T10:47:34Z",
+  "generated_at": "2026-11-21T17:45:34Z",
   "nodes": [
     {
       "attrs": {
@@ -335,6 +335,15 @@
       },
       "id": "config:.gitattributes",
       "source": ".gitattributes",
+      "type": "config"
+    },
+    {
+      "attrs": {
+        "lines": 189,
+        "path": ".githooks/pre-push"
+      },
+      "id": "config:.githooks/pre-push",
+      "source": ".githooks/pre-push",
       "type": "config"
     },
     {
@@ -348,7 +357,7 @@
     },
     {
       "attrs": {
-        "lines": 820,
+        "lines": 833,
         "path": "Documentation/architecture/codebase-graph.json"
       },
       "id": "config:Documentation/architecture/codebase-graph.json",
@@ -393,7 +402,7 @@
     },
     {
       "attrs": {
-        "lines": 41,
+        "lines": 52,
         "path": "manifest.schema.json"
       },
       "id": "config:manifest.schema.json",
@@ -662,11 +671,15 @@
       "type": "workflow"
     }
   ],
-  "source_commit": "8b623b11e8f5c7a04cb045855e6476b72ddeb80f",
+  "source_commit": "f0b5f89795fb918f59882ddda093c4d09bcd9f64",
   "sources": [
     {
       "path": ".gitattributes",
       "sha256": "1a1dbe176bc233b499d35a57db7513f2941c99ab9759f177830c9149be99005b"
+    },
+    {
+      "path": ".githooks/pre-push",
+      "sha256": "ed37d80a903d049b088b17b313753b34007721041601c87dc3880af1485dbfd9"
     },
     {
       "path": ".github/tests/test-graph-freshness.sh",
@@ -686,7 +699,7 @@
     },
     {
       "path": "Documentation/architecture/codebase-graph.json",
-      "sha256": "2a0ebfae4074bb9cf44204b3f91bd859403e4cda8e6b1f77e441c8c8ccbc69a2"
+      "sha256": "37df60b856c8ab62683123d688d7ad73d2d49bcef8eb8a0ad1a10b9426131223"
     },
     {
       "path": "README.md",
@@ -826,7 +839,7 @@
     },
     {
       "path": "manifest.schema.json",
-      "sha256": "903287c40311bb6c5060f258eb71a6c7981b1e484614611f1177690e847b3c98"
+      "sha256": "e69de2b51144793bfeb7a4a07db3a7609103b35ac22121f15767642bf2a70c5e"
     }
   ]
 }
